@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dbviewer.LoginWindow">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="User name" />
+                  <TextField fx:id="userNameField" />
+                  <Label text="Password" />
+                  <PasswordField fx:id="passwordField" />
+                  <Label text="Database name" />
+                  <TextField fx:id="dbNameField" />
+                  <Label text="Port" />
+                  <TextField fx:id="portFiled" />
+                  <Label text="Hostname" />
+                  <TextField fx:id="hostNameField" />
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#login" text="Login" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

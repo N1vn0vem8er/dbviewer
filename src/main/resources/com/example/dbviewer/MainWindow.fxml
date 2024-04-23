@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dbviewer.MainWindowController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <SplitPane fx:id="mainPane" dividerPositions="0.2" prefHeight="410.0" prefWidth="696.0" BorderPane.alignment="CENTER">
+               <items>
+                  <ListView fx:id="tableList" onMousePressed="#tableSelected" prefHeight="200.0" prefWidth="200.0" />
+                  <TabPane fx:id="tabView" prefHeight="382.0" prefWidth="488.0" tabClosingPolicy="ALL_TABS" />
+               </items>
+            </SplitPane>
+         </center>
+         <top>
+            <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu fx:id="menuFile" mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem fx:id="menuFileSave" mnemonicParsing="false" text="Save" />
+                        <MenuItem fx:id="menuFileSaveAs" mnemonicParsing="false" text="Save As" />
+                        <MenuItem fx:id="menuFileOpen" mnemonicParsing="false" text="Open" />
+                    <MenuItem fx:id="menuFileClose" mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                  <Menu fx:id="menuDatabase" mnemonicParsing="false" text="Database">
+                    <items>
+                        <MenuItem fx:id="menuDatabaseCommit" mnemonicParsing="false" onAction="#commit" text="Commit" />
+                        <MenuItem fx:id="menuDatabaseRollback" mnemonicParsing="false" onAction="#rollback" text="Rollback" />
+                        <MenuItem mnemonicParsing="false" onAction="#refreshConnection" text="Refresh Connection" />
+                      <MenuItem fx:id="menuDatabaseRefresfTables" mnemonicParsing="false" onAction="#refreshTables" text="Refresh Tables" />
+                        <MenuItem fx:id="menuDatabaseRefreshTable" mnemonicParsing="false" onAction="#refreshTable" text="Refresh Table" />
+                        <MenuItem mnemonicParsing="false" onAction="#openSearch" text="Search" />
+                        <MenuItem mnemonicParsing="false" onAction="#openInsert" text="Insert" />
+                        <MenuItem mnemonicParsing="false" onAction="#openUpdate" text="Update" />
+                        <MenuItem mnemonicParsing="false" onAction="#openDelete" text="Delete" />
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
